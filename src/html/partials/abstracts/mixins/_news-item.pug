@@ -1,7 +1,0 @@
-mixin newsItem(title, date, excerpt)
-  +b.ARTICLE.news(itemscope, itemtype="http://schema.org/Article")
-    +e.H2.title
-      a(href="single-news.html", itemprop="headline") #{title}   
-    +e.date(itemprop="datePublished") !{date}
-    +e.excerpt(itemprop="articleSection") !{excerpt}
-    +e.A.link(href="single-news.html") Далее...

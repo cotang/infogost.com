@@ -1,0 +1,30 @@
+.news{
+  margin: 30px 0 50px;
+  @include mq($from:xs, $until:sm){
+    margin: 20px 0 20px;
+  }
+  &__date{
+    // font-size: $font-size-small;
+    margin-bottom: 10px;
+    color: $text-green;
+  }
+  &__title{
+    margin: 20px 0 20px;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;  
+  }
+  &__link{
+    display: inline-block;
+    padding-bottom: 10px; 
+  } 
+  &__text{
+    clear: both;
+    img{
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+

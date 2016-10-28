@@ -1,0 +1,28 @@
+.questions{
+
+}
+
+.question{  
+  margin: 30px 0 50px;
+  @include mq($from:xs, $until:sm){
+    margin: 20px 0 20px;
+  }
+
+  &__title{
+    margin: 20px 0 20px;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;  
+  }
+  &__link{
+    display: inline-block; 
+  } 
+  &__answer{
+    border-left: 3px solid $dark-green;
+    padding: 0 20px;
+    margin: 20px 0;
+  } 
+  &__person{
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+// 3rd party
+@import "partials/abstracts/variables";
+@import "partials/abstracts/bootstrap-flex";
+@import "vendor/normalize";
+@import "vendor/mq";
+@import "vendor/slick";
+
+// Abstracts
+// @import "partials/abstracts/functions";
+@import "partials/abstracts/mixins";
+// @import "partials/abstracts/placeholders";
+// @import "partials/abstracts/helpers";
+@import "partials/abstracts/png-sprite";
+
+// Base
+// @import "partials/base/typography";
+// @import "partials/base/template";
+
+// Components
+// @import "partials/components/form";
+// @import "partials/components/form-states";
+// @import "partials/components/btn";
+
+// @import "partials/components/header";
+// @import "partials/components/nav";
+// @import "partials/components/promo";
+// @import "partials/components/three-buttons";
+// @import "partials/components/search";
+// @import "partials/components/sidebar";
+// @import "partials/components/footer";
+// @import "partials/components/contacts-section";
+// @import "partials/components/pagination";
+
+// @import "partials/components/schema";
+// @import "partials/components/certification-docs";
+// @import "partials/components/questions-section";
+// @import "partials/components/news-section";
+
+
+// @import "partials/components/content";
+// @import "partials/components/office";
+// @import "partials/components/certification-type";
+
+// @import "partials/components/question";
+// @import "partials/components/news";
+

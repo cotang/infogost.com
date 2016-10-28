@@ -1,0 +1,12 @@
+include ../abstracts/bemto/bemto.pug
+
+        
++b.search
+  +e.FORM.form
+    +e.SELECT.select
+      option Поиск по документам
+      option Поиск по сайту
+      option Поиск в yandex
+    +e.INPUT.input(type='text', name='Поиск', placeholder='Поиск')
+    +e.INPUT.input(type='submit', value='Найти')
+

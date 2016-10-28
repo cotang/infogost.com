@@ -1,0 +1,26 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--news
+    .container-fluid
+      .row
+
+        .col-xs-12.col-lg-8.push-lg-2
+          // Nav
+          include partials/components/_nav.pug 
+          // Search
+          include partials/components/_search.pug 
+          // News
+          include partials/components/_news.pug
+
+        .col-xs-12.col-lg-2.pull-lg-8    
+          // Left sidebar
+          include partials/components/_left-sidebar.pug 
+
+        .col-xs-12.col-lg-2
+          // Right sidebar
+          include partials/components/_right-sidebar.pug 
+
+
+
+

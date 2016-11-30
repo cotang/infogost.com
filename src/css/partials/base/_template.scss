@@ -24,11 +24,11 @@ body {
 
 a {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
   @include transition();
 
   &:hover, &:focus {
-    color: $link-color;
+    color: $text-color;
     text-decoration: underline;
   }
 }

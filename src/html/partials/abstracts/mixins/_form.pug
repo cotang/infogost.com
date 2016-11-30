@@ -1,18 +1,34 @@
-- var question = [{name: 'question', title : 'Задать вопрос', button: 'Задать вопрос', success: 'Ваш вопрос отправлен'}] 
 - var application = [{name: 'application', title : 'Заказать документ онлайн', button: 'Заказать документ', success: 'Ваша заявка отправлена'}] 
+- var applicationHeader = [{name: 'application-header', title : 'Рассчитать стоимость', text: 'Узнать сроки и стоимость услуги онлайн', button: 'Узнать стоимость', success: 'Ваша заявка отправлена'}] 
+- var question = [{name: 'question', title : 'Задать вопрос', button: 'Задать вопрос', success: 'Ваш вопрос отправлен'}] 
 - var call = [{name: 'call', title : 'Для получения бесплатной консультации заполните форму', button: 'Отправить', success: 'Ваш запрос отправлен'}] 
-//- - var review = [{name: 'review', title : 'Напишите отзыв о нашей работе', button: 'Отправить отзыв', success: 'Отзыв успешно отправлен'}] 
+
 
 mixin form(items)
   each item in items
     +b.SECTION(class= 'form--' + item.name)
       form(action='', method='')
         //- +e.A.close(href='#')
-        +e.H3.title #{item.title}
+        +e.H3.title #{item.title}          
+
+        if item.name == 'application-header'
+          +e.P.text #{item.text}
+          .form-group.field-product.required
+            +e.INPUT.input(type='text', name='Продукт', placeholder="Наименование продукта*")
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-name.required
+            +e.INPUT.input(type='text', name='Имя', placeholder="Ваше имя*")
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-tel.required
+            +e.INPUT.input(type='tel', name='Телефон', placeholder="Ваш телефон*")
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-email.required
+            +e.INPUT.input(type='email', name='Email', placeholder="Ваш email*")
+            p.help-block Ошибка заполнения поля формы
 
         if item.name == 'application'
           .form-group.field-product.required
-            +e.TEXTAREA.textarea(name='Продукт', placeholder="Наименование продукта*")
+            +e.INPUT.input(type='text', name='Продукт', placeholder="Наименование продукта*")
             p.help-block Ошибка заполнения поля формы
           .form-group.field-name.required
             +e.INPUT.input(type='text', name='Имя', placeholder="Ваше имя*")
@@ -81,5 +97,8 @@ mixin form(items)
         //-     option Тверская область
 
         .form-group
-          +b.BUTTON.btn--form(type='submit') #{item.button}
+          if item.name == 'application-header'
+            +b.BUTTON.btn--form.--header(type='submit') #{item.button}
+          else
+            +b.BUTTON.btn--form(type='submit') #{item.button}
           p.help-block.help-block-success #{item.success}

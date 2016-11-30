@@ -1,26 +1,25 @@
 .pagination{
-  text-align: left;
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
 
-  // span{
-  //   display: inline-block;
-  //   margin-right: 10px;
-  // }
-
-  // &__number{
-  //   display: inline-block;
-  //   padding: 5px 10px;
-  //   color: $text-color;
-  //   &:hover, &:focus, &:active{
-  //     color: $red;
-  //   }
-  //   &--current{
-  //     background-color: $text-color;
-  //     color: $white;
-  //     &:hover, &:focus, &:active{
-  //       color: $white;
-  //     }
-  //   }
-  // } 
+  &__number{
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: $grey-pag;
+    color: $text-color;
+    &:hover, &:focus, &:active{
+      text-decoration: none;
+      color: $red-pag;
+    }
+    &--current{
+      background-color: $red-pag;
+      color: $text-color-white;
+      &:hover, &:focus, &:active{
+        color: $text-color-white;
+      }
+    }
+  } 
 }

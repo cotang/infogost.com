@@ -3,18 +3,18 @@
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: $text-green;
-  margin: 20px 25%;
-  @include mq($from:sm, $until:xl){
-    margin: 20px 5%;
-  }
-  @include mq($from:xs, $until:sm){
-    margin: 20px 0;
-  }
+  // margin: 20px 25%;
+  // @include mq($from:sm, $until:xl){
+  //   margin: 20px 5%;
+  // }
+  // @include mq($from:xs, $until:sm){
+  //   margin: 20px 0;
+  // }
   
   form{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   &__title{
     flex: 0 0 100%;
@@ -22,8 +22,11 @@
     margin: 0;
     padding: 0 15px 15px;
     font-weight: bold;
-    font-size: $font-size-supertitle;
+    font-size: $font-size-title;
     text-transform: uppercase;
+  }
+  &__text{
+
   }
   .form-group{
     flex: 0 0 100%;
@@ -34,15 +37,15 @@
   }
   &__input{
     background-color: $white;
-    padding: 10px 15px;    
+    padding: 5px 10px;    
     width: 100%;
-    border: 1px solid $form--bg;
-    font-weight: bold;
+    // border: 1px solid $form--bg;
+    // font-weight: bold;
     &::-webkit-input-placeholder{
-      color: $text-green;
+      color: $text;
     }       
     &::placeholder{
-      color: $text-green;
+      color: $text;
     }
     &:focus::-webkit-input-placeholder{
       color: transparent;         
@@ -52,19 +55,19 @@
     } 
   }
   &__textarea{
-    color: $text-green;
+    // color: $text-green;
     background-color: $white;
-    padding: 10px 15px;     
+    padding: 5px 10px;     
     width: 100%;
-    border: 1px solid $form--bg;
+    // border: 1px solid $form--bg;
     height: 150px;
     vertical-align: top;
-    font-weight: bold;
+    // font-weight: bold;
     &::-webkit-input-placeholder{
-      color: $text-green;
+      color: $text;
     }       
     &::placeholder{
-      color: $text-green;
+      color: $text;
     }
     &:focus::-webkit-input-placeholder{
       color: transparent;         
@@ -73,55 +76,130 @@
       color: transparent;         
     } 
   }
+  &__select{
+    background-color: $white;
+    padding: 5px 10px;    
+    width: 100%;
+  }
+  // &--call{
+  //   background-image: url(../img/formback.png);
+  //   background-repeat: repeat;
+  //   border: 1px solid $form--bg;
+  //   .form-group:nth-of-type(1), 
+  //   .form-group:nth-of-type(2) {
+  //     flex: 0 0 50%;
+  //     max-width: 50%;
+  //     margin-bottom: 30px; 
+  //     @include mq($from:xs, $until:sm){
+  //       flex: 0 0 100%;
+  //       max-width: 100%;
+  //       margin-bottom: 15px;
+  //     } 
+  //   }
+  //   .form__title{
+  //     font-weight: normal;
+  //   }
+  //   .form__input{
+  //     font-weight: normal;
+  //     padding: 15px 20px; 
+  //   }
+  //   .form__textarea{
+  //     font-weight: normal;
+  //     padding: 15px 20px; 
+  //   } 
+  // }
 
-  &--call{
-    background-image: url(../img/formback.png);
-    background-repeat: repeat;
-    border: 1px solid $form--bg;
-    .form-group:nth-of-type(1), 
-    .form-group:nth-of-type(2) {
+  // &--question, &--application{
+  //   background-color: $light-green;
+  //   border-radius: 5px;
+  //   box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+  // }
+  &--application-header{
+    max-width: 600px;
+    .form__title{
+      background-color: $blue-form-title;
+      color: $text-color-white;
+      padding-bottom: 0;
+      flex: 0 0 calc(100% - 20px);
+      max-width: calc(100% - 20px);
+    }
+    .form__text{
+      background-color: $blue-form-title;
+      color: $text-color-white;
+      text-align: right;
+      display: block;
+      margin: 0;
+      flex: 0 0 calc(100% - 20px);
+      max-width: calc(100% - 20px);
+      padding: 0 5px 5px;
+      margin-bottom: 10px;
+    }
+    .form-group{
+      padding-left: 10px;
+      padding-right: 10px;
       flex: 0 0 50%;
       max-width: 50%;
-      margin-bottom: 30px; 
-      @include mq($from:xs, $until:sm){
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 15px;
-      } 
     }
-    .form__title{
-      font-weight: normal;
+    .form__input, .form__textarea{
+      border: 1px solid $blue-form-border;
+      padding: 3px 5px;
+      color: $btn-form-color;
+      &::-webkit-input-placeholder{
+        color: $btn-form-color;
+      }       
+      &::placeholder{
+        color: $btn-form-color;
+      }
+      &:focus::-webkit-input-placeholder{
+        color: transparent;         
+      }       
+      &:focus::placeholder{
+        color: transparent;         
+      }
     }
-    .form__input{
-      font-weight: normal;
-      padding: 15px 20px; 
-    }
-    .form__textarea{
-      font-weight: normal;
-      padding: 15px 20px; 
-    }
- 
-  }
-
-  &--question, &--application{
-    background-color: $light-green;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    // .form-group:nth-of-type(1), 
-    // .form-group:nth-of-type(2) {
-    //   flex: 0 0 50%;
-    //   max-width: 50%;
-    //   margin-bottom: 30px; 
-    //   @include mq($from:xs, $until:sm){
-    //     flex: 0 0 100%;
-    //     max-width: 100%;
-    //     margin-bottom: 15px;
-    //   } 
+    // .form__textarea{
+    //   height: 27px;
+    //   border: 1px solid $blue-form-border;
+    //   padding: 2px 5px;
+    //   color: $btn-form-color;
+    //   &::-webkit-input-placeholder{
+    //     color: $btn-form-color;
+    //   }       
+    //   &::placeholder{
+    //     color: $btn-form-color;
+    //   }
+    //   &:focus::-webkit-input-placeholder{
+    //     color: transparent;         
+    //   }       
+    //   &:focus::placeholder{
+    //     color: transparent;         
+    //   }
     // }
-    // @include mq($from:xs, $until:xl){
-    //   margin-left: 0;
-    //   margin-right: 0;
-    // } 
+  }
+  &--search{
+    padding: 0;
+    .form-group{
+      margin-bottom: 0;
+      flex: 0 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+      &:nth-of-type(2){
+        flex: 1 0 auto;
+      }
+      &:last-of-type{
+        text-align: right;
+      }
+    } 
+    .form__input{
+      height: 100%;
+      border: none;
+    }
+    .form__select{
+      height: 100%;
+      border-bottom: none;
+      border-top: none;
+      border-left: none;
+    }
   }
 
 }

@@ -2,105 +2,48 @@
   display: inline-block;
   border: none;
   outline: none;
-  color: $link-color;
+  color: $text-color;
   font-size: $font-size-btn;
-  text-transform: uppercase;  
-  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
   padding: 8px 25px;
   margin: 0;
-
   &:hover, &:focus, &:active{
     // text-decoration: none;
   }
+ 
 
-  &--promo{
-    background-image: linear-gradient(0deg, #dcffff, #feffff, #deffff 10%, #d8ffff 17.5%, #daffff 30%, #fff 30%, #fff 37.5%, #fcffff 37.5%, #edffff 42.5%, #e9ffff 65%, #d5ffff, #ceffff 95%, #c0ffff 100%);
-  } 
-  &--application{
-    transition: none;
-    border-radius: 50%;
-    @include sprite($s-btn-application);
-    &:hover, &:focus, &:active{
-      @include sprite($s-btn-application-hover);
-    }
-  } 
-  &--question{
-    transition: none;
-    border-radius: 50%;
-    @include sprite($s-btn-question);
-    &:hover, &:focus, &:active{
-      @include sprite($s-btn-question-hover);
-    }
-  } 
-  &--call{
-    transition: none;
-    border-radius: 50%;
-    @include sprite($s-btn-call); 
-    &:hover, &:focus, &:active{
-      @include sprite($s-btn-call-hover);
-    }
-  } 
-  &--form{
-    font-weight: bold;
-    height: 49px;
-    line-height: 49px;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: $dark-green;
-    color: $light-green;
-        background: url(../img/button-left.png) left no-repeat, 
-                    url(../img/button-right.png) right no-repeat, 
-                    $dark-green url(../img/button-back.png) repeat-x 100% 0;
-    &:hover, &:focus, &:active{
-          background: url(../img/buttonh-left.png) left no-repeat, 
-          url(../img/buttonh-right.png) right no-repeat, 
-          $dark-green url(../img/buttonh-back.png) repeat-x 100% 0;
-    }
-  } 
-  &--questions-section{
-    padding: 10px 45px;
-    border-radius: 2px;
-    background-color: $white;
-    box-shadow: -2px 2px 2px 1px rgba($dark-green, 0.5),
-                inset 1px -1px 5px 3px rgba($light-green, 0.8),;
-  }
-  &--tag{
-    text-transform: none;
-    background-color: transparent;
-    color: $cyan;
-    font-size: $font-size-small;
-    font-weight: bold;
-    border: 1px solid $cyan;
+  &--header{
+    background-color: $btn-form;
+    color: $btn-form-color;
+    border: 1px solid $blue-form-border;    
     border-radius: 3px;
     padding: 5px 10px;
-    margin-right: 5px;
-    margin-bottom: 10px;
+    text-shadow: 1px 1px $white;
+    width: 100%;
+    font-weight: bold;
+    // margin-right: 5px;
+    // margin-bottom: 10px;
     &:hover, &:focus, &:active{
-      background-color: $footer-list--border;
+      background-color: $btn-form-hover;
       color: $text-color-white;
+      text-shadow: 1px 1px $btn-form-color;
     }
   } 
+  &--search{
+    border-left: 1px solid #c4c4c4;
+    background-image: linear-gradient(0deg, #da3c47, #e14c57 35.4%, #e4515c 35.4%, #e4515c 45.1%, #e65660 45.1%, #e65660 51.6%, #e9666f 51.6%, #ed7780 64.5%, #ed7780 74.1%, #ef7f87 74.1%, #ef7f87 83.8%, #f1868e 83.8%, #f1868e 90.3%, #f28991 90.3%, #f28a91 96.7%, #f6b0b5 96.7%);
+  }
+  &--further{
+    background-image: linear-gradient(0deg, #e11717, #ef3535 44%, #ff5959);
+    color: $text-color-white;
+    text-transform: none;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px 15px;
+    &:hover, &:focus, &:active{
+      color: $text-color-white;
+      text-decoration: none;
+    }
+  }
 }
 
-.up{
-  display: none;
-  position: fixed;
-  right: 20px;
-  bottom: 40px;
-  height: 40px;
-  width: 50px;
-  border-radius: 5px;
-  background-color: $black;
-  &:after{
-    content: '';
-    display: inline-block;
-    @include sprite($s-up);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &:hover, &:focus, &:active{
-    background-color: $up-hover;
-  }
-}

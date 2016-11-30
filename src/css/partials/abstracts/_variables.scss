@@ -65,22 +65,27 @@ $mq-breakpoints: (
 
 $white:                       #ffffff;
 $black:                       #000000;
-$grey-menu:                   #535353;
+$text:                        #222222;
+$menu-title:                  #525252;
+$contacts-border-bottom:      #b5b5b5;
+$news-border-bottom:          #838B8B;
 
-$darkest-green:               #012837;
-$dark-green:                  #02686f;
-$light-green:                 #bcf9fd;
 
-$cyan:                        #00fdfd;
+$pale:                        #f7f9fc;
+$pale-border:                 #e0e9f6;
+$blue:                        #367dcd;
+$crimson:                     #b90f0f;
 
-$menu--border-top:            #10B9B9;
-$sidebar--border:             #a1d2d5;
-$footer-list--border:         #006771;
-$form--bg:                    #89d2d4;
-$form--border-top:            #376d75;
-$form--border-bottom:         #528e95;
-$copyright--border:           #00a0a6;
-$up-hover:                    #49a7a4;
+$grey-pag:                    #e8e8e8;
+$red-pag:                     #ec2f2f;
+
+
+$btn-form-color:              #5480b3;
+$btn-form:                    #d6efdc;
+$btn-form-hover:              #e96770;
+$blue-form-title:             #4892d3;
+$blue-form-border:            #5385b7;
+
 
 $success:                     #5cb85c;
 $error:                       #d9534f;
@@ -89,14 +94,11 @@ $error:                       #d9534f;
 // Colors in use
 
 $body-bg:                     $white;
-$text-color:                  $black;
-$text-green:                  $dark-green;
+$text-color:                  $text;
 
-$link-color:                  $dark-green;
+$link-color:                  $blue;
 
 $text-color-white:            $white;
-$link-color-white:            $text-color-white;
-
 
 
 
@@ -104,32 +106,24 @@ $link-color-white:            $text-color-white;
 //  Typography
 //------------------------------------------------------------------------------
 
-$font-family:                   Arial, Roboto, Helvetica, Arial, sans-serif;
-// $font-family-muller:            Muller, Helvetica, Arial, sans-serif;
+$font-family:                   Arial, sans-serif;
 $font-family--serif:            Georgia, "Times New Roman", Times, serif;
 //$font-family--monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
 
 
-$font-size:                   16px;
-$font-size-menu:              14px;
-$font-size-small:             14px;
-$font-size-smallest:          12px;
+$font-size:                   15px;
+$font-size-title:             24px;
 
-$font-size-btn:               18px;
-$font-size-sidebar:           18px;
-$font-size-city:              18px;
-$font-size-sidebar-title:     20px;
-$font-size-city:              20px;
-$font-size-supertitle:        24px;
-// $font-size-max:               36px;
-// $font-size-supertitle:        32px;
-// $font-size-title:             30px;
-// $font-size-title-24:          24px;
-// $font-size-title-22:          22px;
-// $font-size-subtitle:          20px;
+$font-size-btn:               $font-size;
+$font-size-menu:              15px;
+$font-size-city:              13px;
+$font-size-sidebar:           13px;
+
+$font-size-supertitle:        36px;
+$font-size-form-header-title: 30px;
+$font-size-form-title:        18px;
+$font-size-small:             12px;
 
 $line-height:                 1.43;
-
-
 
 

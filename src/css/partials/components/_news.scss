@@ -16,12 +16,11 @@
 .news-item{
   padding-bottom: 10px;
   border-bottom: 1px dotted $black;
-  &__title{
+  &__subtitle{
     margin: 10px 0;
     font-weight: normal;
     font-size: $font-size;
   }
-
   &__date{
     font-size: $font-size-small;
     margin-bottom: 10px;
@@ -31,14 +30,6 @@
   &__link{
     display: inline-block;
   } 
-  &__text{
-    clear: both;
-    img{
-      float: left;
-      margin-right: 15px;
-      margin-bottom: 15px;
-    }
-  }
   &__excerpt{
     padding-left: 20px;
     padding-right: 20px;
@@ -47,5 +38,19 @@
     padding-left: 20px;
     padding-right: 20px;
     text-align: right;
+  }
+
+  &__title{
+    margin: 20px 0;
+    font-weight: normal;
+    font-size: $font-size-title;
+  }
+  &__text{
+    clear: both;
+    img{
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
   }
 }

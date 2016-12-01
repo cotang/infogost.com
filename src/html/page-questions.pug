@@ -15,11 +15,14 @@ block content
             +e.H1.title(itemprop="headline") Задать вопрос специалисту
             +e.text(itemprop="articleBody")
               p Здравствуйте!
-              p На этой странице вы можете заказать обратный звонок с сайта. Наши специалисты перезвонят в ближайшее время.
-              p Обратите внимание, что все поля в форме обязательны для заполнения.
-              p Будем рады ответить на интересующие вас вопросы! Ждем ваших заявок!
-          // Form call
-          include partials/components/_form--call.pug  
+              p Возникшие у вас вопросы, вы можете задать, воспользовавшись формой на этой странице. Обратите внимание, что все поля в форме обязательны для заполнения.
+              p Наши специалисты с радостью помогут вам разобраться в тонкостях сертификации! Ждем ваших вопросов!
+            // Form question
+            include partials/components/_form--question.pug 
+            // Questions
+            include partials/components/_questions.pug  
+            // Three buttons
+            include partials/components/_three-buttons.pug 
 
         .col-xs-12.col-lg-2.pull-lg-8    
           // Left sidebar
@@ -28,9 +31,6 @@ block content
         .col-xs-12.col-lg-2
           // Right sidebar
           include partials/components/_right-sidebar.pug 
-
-
-
 
 
 

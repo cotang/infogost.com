@@ -11,8 +11,15 @@
     // text-decoration: none;
   }
  
-
+  &--form{
+    color: $text-color-white;
+    background-image: linear-gradient(0deg, #da3c47, #e14c57 35.4%, #e4515c 35.4%, #e4515c 45.1%, #e65660 45.1%, #e65660 51.6%, #e9666f 51.6%, #ed7780 64.5%, #ed7780 74.1%, #ef7f87 74.1%, #ef7f87 83.8%, #f1868e 83.8%, #f1868e 90.3%, #f28991 90.3%, #f28a91 96.7%, #f6b0b5 96.7%);
+    &:hover, &:focus, &:active{
+      text-decoration: underline;
+    }
+  }
   &--header{
+    background-image: none;
     background-color: $btn-form;
     color: $btn-form-color;
     border: 1px solid $blue-form-border;    
@@ -21,15 +28,15 @@
     text-shadow: 1px 1px $white;
     width: 100%;
     font-weight: bold;
-    // margin-right: 5px;
-    // margin-bottom: 10px;
     &:hover, &:focus, &:active{
       background-color: $btn-form-hover;
       color: $text-color-white;
       text-shadow: 1px 1px $btn-form-color;
+      text-decoration: none;
     }
   } 
   &--search{
+    color: $text-color-white;
     border-left: 1px solid #c4c4c4;
     background-image: linear-gradient(0deg, #da3c47, #e14c57 35.4%, #e4515c 35.4%, #e4515c 45.1%, #e65660 45.1%, #e65660 51.6%, #e9666f 51.6%, #ed7780 64.5%, #ed7780 74.1%, #ef7f87 74.1%, #ef7f87 83.8%, #f1868e 83.8%, #f1868e 90.3%, #f28991 90.3%, #f28a91 96.7%, #f6b0b5 96.7%);
   }
@@ -45,5 +52,6 @@
       text-decoration: none;
     }
   }
+
 }
 

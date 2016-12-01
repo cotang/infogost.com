@@ -15,6 +15,17 @@ jQuery(document).ready(function($){
     }
   }); 
 
+  /* hamburger */
+  $('.hamburger').click(function(e) { 
+      e.preventDefault();
+      $(this).closest('.nav').find('.nav__list').slideToggle();
+  });
+  // $('.nav-header__link--dropdown').click(function(e) { 
+  //     e.preventDefault(); 
+  //     $(this).toggleClass('nav-header__link--open');   
+  //     $(this).next('.subnav').slideToggle();
+  // });
+
 
   // /* галерея header banner */
   // $('.promo__gallery').slick({
@@ -134,16 +145,7 @@ jQuery(document).ready(function($){
   //   return false;
   // });
 
-  // /* hamburger */
-  // $('.hamburger').click(function(e) { 
-  //     e.preventDefault();    
-  //     $(this).closest('.nav-header').find('.nav-header__list').slideToggle();
-  // });
-  // $('.nav-header__link--dropdown').click(function(e) { 
-  //     e.preventDefault(); 
-  //     $(this).toggleClass('nav-header__link--open');   
-  //     $(this).next('.subnav').slideToggle();
-  // });
+
 
   // /* certification type */
   // $('.certification-type__link').click(function(e) { 
@@ -153,18 +155,19 @@ jQuery(document).ready(function($){
 
 
 
-
-  //   /* Map */
-  //   var map = new GMaps({
-  //       el: '.office__map',
-  //       lat: 56.8378081,
-  //       lng: 60.5950772,
-  //       scrollwheel: false
-  //   });
-  //   map.addMarker({
-  //       lat: 56.8378081,
-  //       lng: 60.5950772,
-  //   });
+  /* Map */
+  $('.office__map').each(function (index, Element) {
+      var map =new GMaps({
+          el: Element,
+          lat: 56.8378081,
+          lng: 60.5950772,
+          scrollwheel: false
+      });
+      map.addMarker({
+          lat: 56.8378081,
+          lng: 60.5950772,
+      });
+  });
 
 });
 

@@ -1,25 +1,33 @@
 .questions{
-
+  // border-bottom: 1px dotted $black;
 }
 
-.question{  
-  margin: 30px 0 50px;
+.question{ 
+  border-bottom: 1px dotted $black;
+  padding-bottom: 30px; 
+  margin: 30px 0 20px;
   @include mq($from:xs, $until:sm){
     margin: 20px 0 20px;
   }
+  &__date{
+    margin-bottom: 10px;
+  }
+  &__subtitle{
 
+  }
+  &__link{
+    display: inline-block; 
+  } 
   &__title{
     margin: 20px 0 20px;
     text-align: center;
     font-weight: normal;
     text-transform: uppercase;  
   }
-  &__link{
-    display: inline-block; 
-  } 
   &__answer{
-    border-left: 3px solid $dark-green;
-    padding: 0 20px;
+    background-color: $light-cyan;
+    border-left: 3px solid $blue;
+    padding: 10px 20px;
     margin: 20px 0;
   } 
   &__person{

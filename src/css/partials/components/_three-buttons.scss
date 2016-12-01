@@ -1,16 +1,61 @@
 .three-buttons{
-  background-color: $light-green;
-  border-bottom: 5px solid $dark-green;
-  text-align: center;
-  padding: 20px 0 0;
-  &__item{
-    margin-bottom: 10px;
+  margin: 20px 0;
+  &__list{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    font-size: $font-size-menu;   
+    border-radius: 3px;
+    @include mq($from:xs, $until:lg){
+      text-align: center;
+    }
   }
-  &__text{
-    margin-top: 15px;
-    text-transform: uppercase;
-    font-size: $font-size-small;
-    font-weight: bold;
-    color: $text-green;
+  &__item{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(0deg, #484848 6.9%, #666 51.1%, #737373 51.1%, #949494 97.6%, #adadad 97.6%); 
+    position: relative;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    @include mq($from:xs, $until:lg){
+      border-top: none;
+    }
+    &:after{
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+      background-image: linear-gradient(0deg,transparent 0,transparent 10%,rgba(255,255,255,.5) 50%,transparent 90%,transparent 100%);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &:first-of-type{
+      border-radius: 3px 0 0 3px;
+    }
+    &:last-of-type{
+      border-radius: 0 3px 3px 0;
+      &:after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    color: $text-color-white;
+
+    &:hover, &:focus {
+      color: $text-color-white;
+      text-decoration: none;
+      background-color: rgba($black, .3);
+    }
   }
 }
+
+

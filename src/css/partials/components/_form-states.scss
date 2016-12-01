@@ -1,11 +1,11 @@
 .has-success{
-  input, textarea{
-    outline: 1px solid $success;
+  .form__input, .form__textarea{
+    border: 1px solid $success;
   }
 }
 .has-error{
-  input, textarea{
-    outline: 1px solid $error;
+  .form__input, .form__textarea{
+    border: 1px solid $error;
   }
   .help-block{
     display: block;
@@ -14,6 +14,7 @@
 .help-block{
   display: none;
   font-size: $font-size-small;
+  margin: 0 0 20px;
 }
 
 

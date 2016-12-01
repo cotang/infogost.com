@@ -54,18 +54,19 @@
           </div>
           <div class="header__form">
             <!-- Form application-->
-            <section class="form form--application">
+            <section class="form form--application-header">
               <form action="" method="">
-                <h3 class="form__title">Заказать документ онлайн</h3>
+                <h3 class="form__title">Рассчитать стоимость </h3>
+                <p class="form__text">Узнать сроки и стоимость услуги онлайн</p>
                 <div class="form-group field-product required">
-                  <textarea class="form__textarea" name="Продукт" placeholder="Наименование продукта*"></textarea>
+                  <input class="form__input" type="text" name="Продукт" placeholder="Наименование продукта*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
-                <div class="form-group field-name required">
+                <div class="form-group field-name">
                   <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
-                <div class="form-group field-tel required">
+                <div class="form-group field-tel">
                   <input class="form__input" type="tel" name="Телефон" placeholder="Ваш телефон*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
@@ -74,7 +75,7 @@
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn--form" type="submit">Заказать документ</button>
+                  <button class="btn btn--form btn--header" type="submit">Узнать стоимость</button>
                   <p class="help-block help-block-success">Ваша заявка отправлена</p>
                 </div>
               </form>
@@ -87,7 +88,7 @@
       <section class="page page--front-page">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-xs-12 col-lg-8">
+            <div class="col-xs-12 col-lg-8 push-lg-2">
               <!-- Nav-->
               <nav class="nav">
                 <div class="nav__hamburger">
@@ -99,14 +100,14 @@
                   <li class="nav__item">
                     <a class="nav__link nav__link--active" href="index.html">Главная</a>
                   </li>
-                  <li class="nav__item">
+                  <li class="nav__item nav__item--blue">
                     <a class="nav__link" href="page-application.html">Заказать документ</a>
                   </li>
-                  <li class="nav__item">
+                  <li class="nav__item nav__item--blue">
                     <a class="nav__link" href="page-call.html">Заказать звонок </a>
                   </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="page-question.html">Задать вопрос</a>
+                  <li class="nav__item nav__item--blue">
+                    <a class="nav__link" href="page-questions.html">Задать вопрос</a>
                   </li>
                   <li class="nav__item">
                     <a class="nav__link" href="page.html">Словарь терминов</a>
@@ -121,57 +122,106 @@
               </nav>
               <!-- Search-->
               <div class="search">
-                <form class="search__form">
-                  <select class="search__select">
-                    <option>Поиск по документам</option>
-                    <option>Поиск по сайту</option>
-                    <option>Поиск в yandex</option>
-                  </select>
-                  <input class="search__input" type="text" name="Поиск" placeholder="Поиск" />
-                  <input class="search__input" type="submit" value="Найти" />
-                </form>
+                <section class="form form--search">
+                  <form action="" method="">
+                    <div class="form-group">
+                      <select class="form__select">
+                        <option>Поиск по документам</option>
+                        <option>Поиск по сайту</option>
+                        <option>Поиск в yandex</option>
+                      </select>
+                    </div>
+                    <div class="form-group field-search required">
+                      <input class="form__input" type="text" name="Поиск" placeholder="Поиск" />
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn--search" type="submit">Найти</button>
+                    </div>
+                  </form>
+                </section>
               </div>
               <!-- News-->
               <section class="news">
                 <h2 class="news__title">Новости сертификации (вывести 10 штук)</h2>
                 <div class="news__articles">
-                  <article class="news" itemscope itemtype="http://schema.org/Article">
-                    <h2 class="news__title">
-                      <a href="single-news.html" itemprop="headline">Сертификация цемента стала обязательной </a>
+                  <article class="news-item" itemscope itemtype="http://schema.org/Article">
+                    <h2 class="news-item__subtitle">
+                      <a class="news-item__link" href="single-news.html" itemprop="headline">Сертификация цемента стала обязательной </a>
                     </h2>
-                    <div class="news__date" itemprop="datePublished">18.08.2016</div>
-                    <div class="news__excerpt" itemprop="articleSection">Начиная с 7 марта на территории России стала обязательной сертификация цемента – это регламентируется Письмом Минпромторга, которое было опубликовано 20 февраля 2016 года, а также ПП РФ №930 от 3 сентября 2015 года. Согласно указанному
+                    <div class="news-item__date" itemprop="datePublished">18.08.2016</div>
+                    <div class="news-item__excerpt" itemprop="articleSection">Начиная с 7 марта на территории России стала обязательной сертификация цемента – это регламентируется Письмом Минпромторга, которое было опубликовано 20 февраля 2016 года, а также ПП РФ №930 от 3 сентября 2015 года. Согласно указанному
                       Постановлению с 7 марта обязательной оценке качества стали подлежать такие виды цемента как ...</div>
-                    <a class="news__link" href="single-news.html">Далее...</a>
+                    <div class="news-item__further">
+                      <a class="btn btn--further" href="single-news.html">Далее</a>
+                    </div>
                   </article>
-                  <article class="news" itemscope itemtype="http://schema.org/Article">
-                    <h2 class="news__title">
-                      <a href="single-news.html" itemprop="headline">Россия ограничила поставки белорусской продукции на российский рынок </a>
+                  <article class="news-item" itemscope itemtype="http://schema.org/Article">
+                    <h2 class="news-item__subtitle">
+                      <a class="news-item__link" href="single-news.html" itemprop="headline">Россия ограничила поставки белорусской продукции на российский рынок </a>
                     </h2>
-                    <div class="news__date" itemprop="datePublished">18.08.2016</div>
-                    <div class="news__excerpt" itemprop="articleSection">К комиссии ЕАЭК 10 февраля поступило обращение от службы по фитосанитарному и ветеринарному контролю о временных ограничениях на ввоз на территорию России товаров, которые были произведены ОАО «Слуцкий сыродельный комбинат», его любанскими
+                    <div class="news-item__date" itemprop="datePublished">18.08.2016</div>
+                    <div class="news-item__excerpt" itemprop="articleSection">К комиссии ЕАЭК 10 февраля поступило обращение от службы по фитосанитарному и ветеринарному контролю о временных ограничениях на ввоз на территорию России товаров, которые были произведены ОАО «Слуцкий сыродельный комбинат», его любанскими
                       и копыльскими филиалами в республике Беларусь, в связи с многочисленными ...</div>
-                    <a class="news__link" href="single-news.html">Далее...</a>
+                    <div class="news-item__further">
+                      <a class="btn btn--further" href="single-news.html">Далее</a>
+                    </div>
                   </article>
-                  <article class="news" itemscope itemtype="http://schema.org/Article">
-                    <h2 class="news__title">
-                      <a href="single-news.html" itemprop="headline">1 января введено эмбарго на ряд турецких товаров </a>
+                  <article class="news-item" itemscope itemtype="http://schema.org/Article">
+                    <h2 class="news-item__subtitle">
+                      <a class="news-item__link" href="single-news.html" itemprop="headline">1 января введено эмбарго на ряд турецких товаров </a>
                     </h2>
-                    <div class="news__date" itemprop="datePublished">18.08.2016</div>
-                    <div class="news__excerpt" itemprop="articleSection">В.Путин подписал указ №583 от 28 ноября 2015г. согласно которому начиная с 1 января 2016 года введены специальные меры экономического зарактера в отношении Турецкой республики. В указе утверждается список продукции, материалов и сырья
+                    <div class="news-item__date" itemprop="datePublished">18.08.2016</div>
+                    <div class="news-item__excerpt" itemprop="articleSection">В.Путин подписал указ №583 от 28 ноября 2015г. согласно которому начиная с 1 января 2016 года введены специальные меры экономического зарактера в отношении Турецкой республики. В указе утверждается список продукции, материалов и сырья
                       запрещённых к импорту в РФ. В список вошли такая пищевая продукция как томаты, капуста, огурцы, ...</div>
-                    <a class="news__link" href="single-news.html">Далее...</a>
+                    <div class="news-item__further">
+                      <a class="btn btn--further" href="single-news.html">Далее</a>
+                    </div>
                   </article>
-                  <section class="pagination">
-                    <span>Страницы:</span>
+                  <article class="news-item" itemscope itemtype="http://schema.org/Article">
+                    <h2 class="news-item__subtitle">
+                      <a class="news-item__link" href="single-news.html" itemprop="headline">Сертификация цемента стала обязательной </a>
+                    </h2>
+                    <div class="news-item__date" itemprop="datePublished">18.08.2016</div>
+                    <div class="news-item__excerpt" itemprop="articleSection">Начиная с 7 марта на территории России стала обязательной сертификация цемента – это регламентируется Письмом Минпромторга, которое было опубликовано 20 февраля 2016 года, а также ПП РФ №930 от 3 сентября 2015 года. Согласно указанному
+                      Постановлению с 7 марта обязательной оценке качества стали подлежать такие виды цемента как ...</div>
+                    <div class="news-item__further">
+                      <a class="btn btn--further" href="single-news.html">Далее</a>
+                    </div>
+                  </article>
+                  <article class="news-item" itemscope itemtype="http://schema.org/Article">
+                    <h2 class="news-item__subtitle">
+                      <a class="news-item__link" href="single-news.html" itemprop="headline">Россия ограничила поставки белорусской продукции на российский рынок </a>
+                    </h2>
+                    <div class="news-item__date" itemprop="datePublished">18.08.2016</div>
+                    <div class="news-item__excerpt" itemprop="articleSection">К комиссии ЕАЭК 10 февраля поступило обращение от службы по фитосанитарному и ветеринарному контролю о временных ограничениях на ввоз на территорию России товаров, которые были произведены ОАО «Слуцкий сыродельный комбинат», его любанскими
+                      и копыльскими филиалами в республике Беларусь, в связи с многочисленными ...</div>
+                    <div class="news-item__further">
+                      <a class="btn btn--further" href="single-news.html">Далее</a>
+                    </div>
+                  </article>
+                  <article class="news-item" itemscope itemtype="http://schema.org/Article">
+                    <h2 class="news-item__subtitle">
+                      <a class="news-item__link" href="single-news.html" itemprop="headline">1 января введено эмбарго на ряд турецких товаров </a>
+                    </h2>
+                    <div class="news-item__date" itemprop="datePublished">18.08.2016</div>
+                    <div class="news-item__excerpt" itemprop="articleSection">В.Путин подписал указ №583 от 28 ноября 2015г. согласно которому начиная с 1 января 2016 года введены специальные меры экономического зарактера в отношении Турецкой республики. В указе утверждается список продукции, материалов и сырья
+                      запрещённых к импорту в РФ. В список вошли такая пищевая продукция как томаты, капуста, огурцы, ...</div>
+                    <div class="news-item__further">
+                      <a class="btn btn--further" href="single-news.html">Далее</a>
+                    </div>
+                  </article>
+                  <div class="pagination">
                     <a class="pagination__number pagination__number--current" href="index.html">1</a>
                     <a class="pagination__number" href="index.html">2</a>
                     <a class="pagination__number" href="index.html">3</a>
-                  </section>
+                    <a class="pagination__number" href="index.html">4</a>
+                    <a class="pagination__number" href="index.html">5</a>
+                  </div>
                 </div>
               </section>
             </div>
-            <div class="col-xs-12 col-lg-2">
+            <div class="col-xs-12 col-lg-2 pull-lg-8">
               <!-- Left sidebar-->
               <aside class="sidebar sidebar--left">
                 <!-- Menu registers-->
@@ -386,7 +436,7 @@
                       </ul>
                     </li>
                     <li class="menu__item">
-                      <a class="menu__link menu__link--dropdown" href="page-news.html">СанПиНы</a>
+                      <a class="menu__link" href="page-news.html">СанПиНы</a>
                     </li>
                     <li class="menu__item">
                       <a class="menu__link menu__link--dropdown" href="#">Технические регламенты Российской Федерации</a>
@@ -540,10 +590,12 @@
               <aside class="sidebar sidebar--right">
                 <!-- Contacts section-->
                 <div class="contacts-section">
-                  <a class="contacts-section__map" href="page-contacts.html"></a>
+                  <a class="contacts-section__map" href="page-contacts.html">
+                    <img src="img/map.png" alt="map" title="map">
+                  </a>
                   <ul class="contacts-section__list">
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ьmsk">В Москве</a>
+                      <a class="contacts-section__link" href="page-contacts.html#msk">В Москве</a>
                     </li>
                     <li class="contacts-section__item">
                       <a class="contacts-section__link" href="page-contacts.html#spb">В Санкт-Петербурге</a>
@@ -564,46 +616,46 @@
                       <a class="contacts-section__link" href="page-contacts.html#ufa">В Уфе</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#msk2">В Москве</a>
+                      <a class="contacts-section__link" href="page-contacts.html#msk">В Москве</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#spb2">В Санкт-Петербурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#spb">В Санкт-Петербурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ekb2">В Екатеринбурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ekb">В Екатеринбурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#perm2">В Перми</a>
+                      <a class="contacts-section__link" href="page-contacts.html#perm">В Перми</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#tyumen2">В Тюмени</a>
+                      <a class="contacts-section__link" href="page-contacts.html#tyumen">В Тюмени</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#surgut2">В Сургуте</a>
+                      <a class="contacts-section__link" href="page-contacts.html#surgut">В Сургуте</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ufa2">В Уфе</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ufa">В Уфе</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#msk3">В Москве</a>
+                      <a class="contacts-section__link" href="page-contacts.html#msk">В Москве</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#spb3">В Санкт-Петербурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#spb">В Санкт-Петербурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ekb3">В Екатеринбурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ekb">В Екатеринбурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#perm3">В Перми</a>
+                      <a class="contacts-section__link" href="page-contacts.html#perm">В Перми</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#tyumen3">В Тюмени</a>
+                      <a class="contacts-section__link" href="page-contacts.html#tyumen">В Тюмени</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#surgut3">В Сургуте</a>
+                      <a class="contacts-section__link" href="page-contacts.html#surgut">В Сургуте</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ufa3">В Уфе</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ufa">В Уфе</a>
                     </li>
                   </ul>
                 </div>
@@ -743,10 +795,10 @@
         <div class="container">
           <div class="copyright__wrapper">
             <div class="copyright__text">
-              <p>© 2008-2016
+              <div>© 2008-2016
                 <a href="index.html">ИнфоГОСТ </a>
-              </p>
-              <p>информационный портал о сертификации </p>
+              </div>
+              <div>информационный портал о сертификации </div>
             </div>
             <div class="counters">
               <a href="#" target="_blank">counter</a>

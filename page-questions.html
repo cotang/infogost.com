@@ -54,18 +54,19 @@
           </div>
           <div class="header__form">
             <!-- Form application-->
-            <section class="form form--application">
+            <section class="form form--application-header">
               <form action="" method="">
-                <h3 class="form__title">Заказать документ онлайн</h3>
+                <h3 class="form__title">Рассчитать стоимость </h3>
+                <p class="form__text">Узнать сроки и стоимость услуги онлайн</p>
                 <div class="form-group field-product required">
-                  <textarea class="form__textarea" name="Продукт" placeholder="Наименование продукта*"></textarea>
+                  <input class="form__input" type="text" name="Продукт" placeholder="Наименование продукта*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
-                <div class="form-group field-name required">
+                <div class="form-group field-name">
                   <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
-                <div class="form-group field-tel required">
+                <div class="form-group field-tel">
                   <input class="form__input" type="tel" name="Телефон" placeholder="Ваш телефон*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
@@ -74,7 +75,7 @@
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn--form" type="submit">Заказать документ</button>
+                  <button class="btn btn--form btn--header" type="submit">Узнать стоимость</button>
                   <p class="help-block help-block-success">Ваша заявка отправлена</p>
                 </div>
               </form>
@@ -99,14 +100,14 @@
                   <li class="nav__item">
                     <a class="nav__link nav__link--active" href="index.html">Главная</a>
                   </li>
-                  <li class="nav__item">
+                  <li class="nav__item nav__item--blue">
                     <a class="nav__link" href="page-application.html">Заказать документ</a>
                   </li>
-                  <li class="nav__item">
+                  <li class="nav__item nav__item--blue">
                     <a class="nav__link" href="page-call.html">Заказать звонок </a>
                   </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="page-question.html">Задать вопрос</a>
+                  <li class="nav__item nav__item--blue">
+                    <a class="nav__link" href="page-questions.html">Задать вопрос</a>
                   </li>
                   <li class="nav__item">
                     <a class="nav__link" href="page.html">Словарь терминов</a>
@@ -121,15 +122,24 @@
               </nav>
               <!-- Search-->
               <div class="search">
-                <form class="search__form">
-                  <select class="search__select">
-                    <option>Поиск по документам</option>
-                    <option>Поиск по сайту</option>
-                    <option>Поиск в yandex</option>
-                  </select>
-                  <input class="search__input" type="text" name="Поиск" placeholder="Поиск" />
-                  <input class="search__input" type="submit" value="Найти" />
-                </form>
+                <section class="form form--search">
+                  <form action="" method="">
+                    <div class="form-group">
+                      <select class="form__select">
+                        <option>Поиск по документам</option>
+                        <option>Поиск по сайту</option>
+                        <option>Поиск в yandex</option>
+                      </select>
+                    </div>
+                    <div class="form-group field-search required">
+                      <input class="form__input" type="text" name="Поиск" placeholder="Поиск" />
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn--search" type="submit">Найти</button>
+                    </div>
+                  </form>
+                </section>
               </div>
               <!-- Content-->
               <section class="content" itemscope itemtype="http://schema.org/Article">
@@ -142,21 +152,25 @@
                 <!-- Form question-->
                 <section class="form form--question">
                   <form action="" method="">
-                    <h3 class="form__title">Задать вопрос</h3>
+                    <h3 class="form__title">Задать вопрос </h3>
                     <div class="form-group field-name required">
-                      <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
+                      <div class="form__description">Ваше имя*</div>
+                      <input class="form__input" type="text" name="Имя" />
                       <p class="help-block">Ошибка заполнения поля формы</p>
                     </div>
                     <div class="form-group field-email required">
-                      <input class="form__input" type="email" name="Email" placeholder="Ваш email*" />
+                      <div class="form__description">Ваш email*</div>
+                      <input class="form__input" type="email" name="Email" />
                       <p class="help-block">Ошибка заполнения поля формы</p>
                     </div>
                     <div class="form-group field-tel">
-                      <input class="form__input" type="tel" name="Телефон" placeholder="Ваш телефон" />
+                      <div class="form__description">Ваш телефон*</div>
+                      <input class="form__input" type="tel" name="Телефон" />
                       <p class="help-block">Ошибка заполнения поля формы</p>
                     </div>
                     <div class="form-group field-question required">
-                      <textarea class="form__textarea" name="Вопрос" placeholder="Ваш вопрос*"> </textarea>
+                      <div class="form__description">Ваш вопрос*</div>
+                      <textarea class="form__textarea" name="Вопрос"> </textarea>
                       <p class="help-block">Ошибка заполнения поля формы</p>
                     </div>
                     <div class="form-group">
@@ -169,8 +183,8 @@
                 <section class="questions">
                   <div class="questions__articles">
                     <article class="question" itemscope itemtype="http://schema.org/Question">
-                      <h2 class="question__title">
-                        <a href="single-question.html" itemprop="headline">Сертификация игрушек авторской работы </a>
+                      <h2 class="question__subtitle">
+                        <a class="question__link" href="single-question.html" itemprop="headline">Сертификация игрушек авторской работы </a>
                       </h2>
                       <div class="question__date" itemprop="datePublished">18.08.2016 </div>
                       <div class="question__ask">
@@ -179,11 +193,13 @@
                           <p>Я изготавливаю авторские игрушки из полимерной глины, меха, проволоки, паралона и разукрашиваю акриловыми красками. Необходимы ли мне какие нибудь сертификаты на продажу данных изделий?</p>
                         </div>
                       </div>
-                      <a class="question__link" href="single-question.html">Читать далее...</a>
+                      <div class="question__further">
+                        <a class="btn btn--further" href="single-question.html">Читать далее</a>
+                      </div>
                     </article>
                     <article class="question" itemscope itemtype="http://schema.org/Question">
-                      <h2 class="question__title">
-                        <a href="single-question.html" itemprop="headline">Сертификация жидкости для электронного испарителя </a>
+                      <h2 class="question__subtitle">
+                        <a class="question__link" href="single-question.html" itemprop="headline">Сертификация жидкости для электронного испарителя </a>
                       </h2>
                       <div class="question__date" itemprop="datePublished">18.08.2016 </div>
                       <div class="question__ask">
@@ -192,11 +208,13 @@
                           <p>доброго. Инетерсуют сроки и стоимость добровольной сертификации жидкости для электронных сигарет. Продукт есть, помещение и юр лицо (ИП) тоже есть. Спасибо</p>
                         </div>
                       </div>
-                      <a class="question__link" href="single-question.html">Читать далее...</a>
+                      <div class="question__further">
+                        <a class="btn btn--further" href="single-question.html">Читать далее</a>
+                      </div>
                     </article>
                     <article class="question" itemscope itemtype="http://schema.org/Question">
-                      <h2 class="question__title">
-                        <a href="single-question.html" itemprop="headline">Сертификация игрушек авторской работы </a>
+                      <h2 class="question__subtitle">
+                        <a class="question__link" href="single-question.html" itemprop="headline">Сертификация игрушек авторской работы </a>
                       </h2>
                       <div class="question__date" itemprop="datePublished">18.08.2016 </div>
                       <div class="question__ask">
@@ -205,16 +223,33 @@
                           <p>Я изготавливаю авторские игрушки из полимерной глины, меха, проволоки, паралона и разукрашиваю акриловыми красками. Необходимы ли мне какие нибудь сертификаты на продажу данных изделий?</p>
                         </div>
                       </div>
-                      <a class="question__link" href="single-question.html">Читать далее...</a>
+                      <div class="question__further">
+                        <a class="btn btn--further" href="single-question.html">Читать далее</a>
+                      </div>
                     </article>
-                    <section class="pagination">
-                      <span>Страницы:</span>
+                    <div class="pagination">
                       <a class="pagination__number pagination__number--current" href="page-questions.html">1</a>
                       <a class="pagination__number" href="page-questions.html">2</a>
                       <a class="pagination__number" href="page-questions.html">3</a>
-                    </section>
+                      <a class="pagination__number" href="page-questions.html">4</a>
+                      <a class="pagination__number" href="page-questions.html">5</a>
+                    </div>
                   </div>
                 </section>
+                <!-- Three buttons-->
+                <div class="three-buttons">
+                  <ul class="three-buttons__list">
+                    <li class="three-buttons__item">
+                      <a class="three-buttons__link" href="page-application.html">Заказать документ</a>
+                    </li>
+                    <li class="three-buttons__item">
+                      <a class="three-buttons__link" href="page-call.html">Заказать звонок </a>
+                    </li>
+                    <li class="three-buttons__item">
+                      <a class="three-buttons__link" href="page-questions.html">Задать вопрос</a>
+                    </li>
+                  </ul>
+                </div>
               </section>
             </div>
             <div class="col-xs-12 col-lg-2 pull-lg-8">
@@ -432,7 +467,7 @@
                       </ul>
                     </li>
                     <li class="menu__item">
-                      <a class="menu__link menu__link--dropdown" href="page-news.html">СанПиНы</a>
+                      <a class="menu__link" href="page-news.html">СанПиНы</a>
                     </li>
                     <li class="menu__item">
                       <a class="menu__link menu__link--dropdown" href="#">Технические регламенты Российской Федерации</a>
@@ -586,10 +621,12 @@
               <aside class="sidebar sidebar--right">
                 <!-- Contacts section-->
                 <div class="contacts-section">
-                  <a class="contacts-section__map" href="page-contacts.html"></a>
+                  <a class="contacts-section__map" href="page-contacts.html">
+                    <img src="img/map.png" alt="map" title="map">
+                  </a>
                   <ul class="contacts-section__list">
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ьmsk">В Москве</a>
+                      <a class="contacts-section__link" href="page-contacts.html#msk">В Москве</a>
                     </li>
                     <li class="contacts-section__item">
                       <a class="contacts-section__link" href="page-contacts.html#spb">В Санкт-Петербурге</a>
@@ -610,46 +647,46 @@
                       <a class="contacts-section__link" href="page-contacts.html#ufa">В Уфе</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#msk2">В Москве</a>
+                      <a class="contacts-section__link" href="page-contacts.html#msk">В Москве</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#spb2">В Санкт-Петербурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#spb">В Санкт-Петербурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ekb2">В Екатеринбурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ekb">В Екатеринбурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#perm2">В Перми</a>
+                      <a class="contacts-section__link" href="page-contacts.html#perm">В Перми</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#tyumen2">В Тюмени</a>
+                      <a class="contacts-section__link" href="page-contacts.html#tyumen">В Тюмени</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#surgut2">В Сургуте</a>
+                      <a class="contacts-section__link" href="page-contacts.html#surgut">В Сургуте</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ufa2">В Уфе</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ufa">В Уфе</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#msk3">В Москве</a>
+                      <a class="contacts-section__link" href="page-contacts.html#msk">В Москве</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#spb3">В Санкт-Петербурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#spb">В Санкт-Петербурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ekb3">В Екатеринбурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ekb">В Екатеринбурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#perm3">В Перми</a>
+                      <a class="contacts-section__link" href="page-contacts.html#perm">В Перми</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#tyumen3">В Тюмени</a>
+                      <a class="contacts-section__link" href="page-contacts.html#tyumen">В Тюмени</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#surgut3">В Сургуте</a>
+                      <a class="contacts-section__link" href="page-contacts.html#surgut">В Сургуте</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ufa3">В Уфе</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ufa">В Уфе</a>
                     </li>
                   </ul>
                 </div>
@@ -789,10 +826,10 @@
         <div class="container">
           <div class="copyright__wrapper">
             <div class="copyright__text">
-              <p>© 2008-2016
+              <div>© 2008-2016
                 <a href="index.html">ИнфоГОСТ </a>
-              </p>
-              <p>информационный портал о сертификации </p>
+              </div>
+              <div>информационный портал о сертификации </div>
             </div>
             <div class="counters">
               <a href="#" target="_blank">counter</a>

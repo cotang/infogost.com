@@ -54,18 +54,19 @@
           </div>
           <div class="header__form">
             <!-- Form application-->
-            <section class="form form--application">
+            <section class="form form--application-header">
               <form action="" method="">
-                <h3 class="form__title">Заказать документ онлайн</h3>
+                <h3 class="form__title">Рассчитать стоимость </h3>
+                <p class="form__text">Узнать сроки и стоимость услуги онлайн</p>
                 <div class="form-group field-product required">
-                  <textarea class="form__textarea" name="Продукт" placeholder="Наименование продукта*"></textarea>
+                  <input class="form__input" type="text" name="Продукт" placeholder="Наименование продукта*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
-                <div class="form-group field-name required">
+                <div class="form-group field-name">
                   <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
-                <div class="form-group field-tel required">
+                <div class="form-group field-tel">
                   <input class="form__input" type="tel" name="Телефон" placeholder="Ваш телефон*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
@@ -74,7 +75,7 @@
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn--form" type="submit">Заказать документ</button>
+                  <button class="btn btn--form btn--header" type="submit">Узнать стоимость</button>
                   <p class="help-block help-block-success">Ваша заявка отправлена</p>
                 </div>
               </form>
@@ -99,14 +100,14 @@
                   <li class="nav__item">
                     <a class="nav__link nav__link--active" href="index.html">Главная</a>
                   </li>
-                  <li class="nav__item">
+                  <li class="nav__item nav__item--blue">
                     <a class="nav__link" href="page-application.html">Заказать документ</a>
                   </li>
-                  <li class="nav__item">
+                  <li class="nav__item nav__item--blue">
                     <a class="nav__link" href="page-call.html">Заказать звонок </a>
                   </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="page-question.html">Задать вопрос</a>
+                  <li class="nav__item nav__item--blue">
+                    <a class="nav__link" href="page-questions.html">Задать вопрос</a>
                   </li>
                   <li class="nav__item">
                     <a class="nav__link" href="page.html">Словарь терминов</a>
@@ -121,22 +122,31 @@
               </nav>
               <!-- Search-->
               <div class="search">
-                <form class="search__form">
-                  <select class="search__select">
-                    <option>Поиск по документам</option>
-                    <option>Поиск по сайту</option>
-                    <option>Поиск в yandex</option>
-                  </select>
-                  <input class="search__input" type="text" name="Поиск" placeholder="Поиск" />
-                  <input class="search__input" type="submit" value="Найти" />
-                </form>
+                <section class="form form--search">
+                  <form action="" method="">
+                    <div class="form-group">
+                      <select class="form__select">
+                        <option>Поиск по документам</option>
+                        <option>Поиск по сайту</option>
+                        <option>Поиск в yandex</option>
+                      </select>
+                    </div>
+                    <div class="form-group field-search required">
+                      <input class="form__input" type="text" name="Поиск" placeholder="Поиск" />
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn--search" type="submit">Найти</button>
+                    </div>
+                  </form>
+                </section>
               </div>
               <!-- Content-->
               <section class="content">
                 <h1 class="content__title">Центры сертификации</h1>
                 <!-- Contacts-->
                 <div class="contacts">
-                  <div class="city city--spb" id="#spb">
+                  <div class="city city--spb" id="spb">
                     <h2 class="city__title">В Санкт-Петербурге</h2>
                     <div class="city__offices">
                       <section class="office">
@@ -159,10 +169,7 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.977519681184!2d60.612608316131734!3d56.82917491592866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16e92362391ed%3A0xdebbb22cfed8d2ca!2z0YPQuy4g0KDQvtC30Ysg0JvRjtC60YHQtdC80LHRg9GA0LMsIDUxLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCA2MjAwMjY!5e0!3m2!1sru!2sru!4v1472217833130"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                       <section class="office">
                         <h2 class="office__title">Гортестурал Челябинск</h2>
@@ -184,10 +191,7 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.005886864385!2d61.40526931608489!3d55.165673144586975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5ed49133a12d5%3A0xb7c81da0963668b0!2z0YPQuy4g0JrQsNGA0LvQsCDQnNCw0YDQutGB0LAsIDU0LCDQp9C10LvRj9Cx0LjQvdGB0LosINCn0LXQu9GP0LHQuNC90YHQutCw0Y8g0L7QsdC7LiwgNDU0MDkx!5e0!3m2!1sru!2sru!4v1472220912281"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                       <section class="office">
                         <h2 class="office__title">Гортестурал Тюмень</h2>
@@ -209,14 +213,11 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.977519681184!2d60.612608316131734!3d56.82917491592866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16e92362391ed%3A0xdebbb22cfed8d2ca!2z0YPQuy4g0KDQvtC30Ysg0JvRjtC60YHQtdC80LHRg9GA0LMsIDUxLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCA2MjAwMjY!5e0!3m2!1sru!2sru!4v1472217833130"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                     </div>
                   </div>
-                  <div class="city city--msk" id="#msk">
+                  <div class="city city--msk" id="msk">
                     <h2 class="city__title">В Москве</h2>
                     <div class="city__offices">
                       <section class="office">
@@ -239,10 +240,7 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.977519681184!2d60.612608316131734!3d56.82917491592866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16e92362391ed%3A0xdebbb22cfed8d2ca!2z0YPQuy4g0KDQvtC30Ysg0JvRjtC60YHQtdC80LHRg9GA0LMsIDUxLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCA2MjAwMjY!5e0!3m2!1sru!2sru!4v1472217833130"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                       <section class="office">
                         <h2 class="office__title">Гортестурал Челябинск</h2>
@@ -264,14 +262,11 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.005886864385!2d61.40526931608489!3d55.165673144586975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5ed49133a12d5%3A0xb7c81da0963668b0!2z0YPQuy4g0JrQsNGA0LvQsCDQnNCw0YDQutGB0LAsIDU0LCDQp9C10LvRj9Cx0LjQvdGB0LosINCn0LXQu9GP0LHQuNC90YHQutCw0Y8g0L7QsdC7LiwgNDU0MDkx!5e0!3m2!1sru!2sru!4v1472220912281"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                     </div>
                   </div>
-                  <div class="city city--ekb" id="#ekb">
+                  <div class="city city--ekb" id="ekb">
                     <h2 class="city__title">В Екатеринбурге</h2>
                     <div class="city__offices">
                       <section class="office">
@@ -294,10 +289,7 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.977519681184!2d60.612608316131734!3d56.82917491592866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16e92362391ed%3A0xdebbb22cfed8d2ca!2z0YPQuy4g0KDQvtC30Ysg0JvRjtC60YHQtdC80LHRg9GA0LMsIDUxLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCA2MjAwMjY!5e0!3m2!1sru!2sru!4v1472217833130"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                       <section class="office">
                         <h2 class="office__title">Гортестурал Челябинск</h2>
@@ -319,14 +311,11 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.005886864385!2d61.40526931608489!3d55.165673144586975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5ed49133a12d5%3A0xb7c81da0963668b0!2z0YPQuy4g0JrQsNGA0LvQsCDQnNCw0YDQutGB0LAsIDU0LCDQp9C10LvRj9Cx0LjQvdGB0LosINCn0LXQu9GP0LHQuNC90YHQutCw0Y8g0L7QsdC7LiwgNDU0MDkx!5e0!3m2!1sru!2sru!4v1472220912281"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                     </div>
                   </div>
-                  <div class="city city--perm" id="#perm">
+                  <div class="city city--perm" id="perm">
                     <h2 class="city__title">В Перми</h2>
                     <div class="city__offices">
                       <section class="office">
@@ -349,14 +338,11 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.005886864385!2d61.40526931608489!3d55.165673144586975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5ed49133a12d5%3A0xb7c81da0963668b0!2z0YPQuy4g0JrQsNGA0LvQsCDQnNCw0YDQutGB0LAsIDU0LCDQp9C10LvRj9Cx0LjQvdGB0LosINCn0LXQu9GP0LHQuNC90YHQutCw0Y8g0L7QsdC7LiwgNDU0MDkx!5e0!3m2!1sru!2sru!4v1472220912281"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                     </div>
                   </div>
-                  <div class="city city--tyumen" id="#tyumen">
+                  <div class="city city--tyumen" id="tyumen">
                     <h2 class="city__title">В Тюмени</h2>
                     <div class="city__offices">
                       <section class="office">
@@ -379,14 +365,11 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.977519681184!2d60.612608316131734!3d56.82917491592866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16e92362391ed%3A0xdebbb22cfed8d2ca!2z0YPQuy4g0KDQvtC30Ysg0JvRjtC60YHQtdC80LHRg9GA0LMsIDUxLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCA2MjAwMjY!5e0!3m2!1sru!2sru!4v1472217833130"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                     </div>
                   </div>
-                  <div class="city city--surgut" id="#surgut">
+                  <div class="city city--surgut" id="surgut">
                     <h2 class="city__title">В Сургуте</h2>
                     <div class="city__offices">
                       <section class="office">
@@ -409,14 +392,11 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.005886864385!2d61.40526931608489!3d55.165673144586975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5ed49133a12d5%3A0xb7c81da0963668b0!2z0YPQuy4g0JrQsNGA0LvQsCDQnNCw0YDQutGB0LAsIDU0LCDQp9C10LvRj9Cx0LjQvdGB0LosINCn0LXQu9GP0LHQuNC90YHQutCw0Y8g0L7QsdC7LiwgNDU0MDkx!5e0!3m2!1sru!2sru!4v1472220912281"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                     </div>
                   </div>
-                  <div class="city city--ufa" id="#ufa">
+                  <div class="city city--ufa" id="ufa">
                     <h2 class="city__title">В Уфе</h2>
                     <div class="city__offices">
                       <section class="office">
@@ -439,15 +419,26 @@
                             <span>9:00</span> до
                             <span>19:00</span> по местному времени</p>
                         </div>
-                        <div class="office__map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.977519681184!2d60.612608316131734!3d56.82917491592866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16e92362391ed%3A0xdebbb22cfed8d2ca!2z0YPQuy4g0KDQvtC30Ysg0JvRjtC60YHQtdC80LHRg9GA0LMsIDUxLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCA2MjAwMjY!5e0!3m2!1sru!2sru!4v1472217833130"
-                            frameborder="0" style="border:0" allowfullscreen> </iframe>
-                        </div>
+                        <div class="office__map"></div>
                       </section>
                     </div>
                   </div>
                 </div>
               </section>
+              <!-- Three buttons-->
+              <div class="three-buttons">
+                <ul class="three-buttons__list">
+                  <li class="three-buttons__item">
+                    <a class="three-buttons__link" href="page-application.html">Заказать документ</a>
+                  </li>
+                  <li class="three-buttons__item">
+                    <a class="three-buttons__link" href="page-call.html">Заказать звонок </a>
+                  </li>
+                  <li class="three-buttons__item">
+                    <a class="three-buttons__link" href="page-questions.html">Задать вопрос</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="col-xs-12 col-lg-2 pull-lg-8">
               <!-- Left sidebar-->
@@ -664,7 +655,7 @@
                       </ul>
                     </li>
                     <li class="menu__item">
-                      <a class="menu__link menu__link--dropdown" href="page-news.html">СанПиНы</a>
+                      <a class="menu__link" href="page-news.html">СанПиНы</a>
                     </li>
                     <li class="menu__item">
                       <a class="menu__link menu__link--dropdown" href="#">Технические регламенты Российской Федерации</a>
@@ -818,10 +809,12 @@
               <aside class="sidebar sidebar--right">
                 <!-- Contacts section-->
                 <div class="contacts-section">
-                  <a class="contacts-section__map" href="page-contacts.html"></a>
+                  <a class="contacts-section__map" href="page-contacts.html">
+                    <img src="img/map.png" alt="map" title="map">
+                  </a>
                   <ul class="contacts-section__list">
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ьmsk">В Москве</a>
+                      <a class="contacts-section__link" href="page-contacts.html#msk">В Москве</a>
                     </li>
                     <li class="contacts-section__item">
                       <a class="contacts-section__link" href="page-contacts.html#spb">В Санкт-Петербурге</a>
@@ -842,46 +835,46 @@
                       <a class="contacts-section__link" href="page-contacts.html#ufa">В Уфе</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#msk2">В Москве</a>
+                      <a class="contacts-section__link" href="page-contacts.html#msk">В Москве</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#spb2">В Санкт-Петербурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#spb">В Санкт-Петербурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ekb2">В Екатеринбурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ekb">В Екатеринбурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#perm2">В Перми</a>
+                      <a class="contacts-section__link" href="page-contacts.html#perm">В Перми</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#tyumen2">В Тюмени</a>
+                      <a class="contacts-section__link" href="page-contacts.html#tyumen">В Тюмени</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#surgut2">В Сургуте</a>
+                      <a class="contacts-section__link" href="page-contacts.html#surgut">В Сургуте</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ufa2">В Уфе</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ufa">В Уфе</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#msk3">В Москве</a>
+                      <a class="contacts-section__link" href="page-contacts.html#msk">В Москве</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#spb3">В Санкт-Петербурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#spb">В Санкт-Петербурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ekb3">В Екатеринбурге</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ekb">В Екатеринбурге</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#perm3">В Перми</a>
+                      <a class="contacts-section__link" href="page-contacts.html#perm">В Перми</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#tyumen3">В Тюмени</a>
+                      <a class="contacts-section__link" href="page-contacts.html#tyumen">В Тюмени</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#surgut3">В Сургуте</a>
+                      <a class="contacts-section__link" href="page-contacts.html#surgut">В Сургуте</a>
                     </li>
                     <li class="contacts-section__item">
-                      <a class="contacts-section__link" href="page-contacts.html#ufa3">В Уфе</a>
+                      <a class="contacts-section__link" href="page-contacts.html#ufa">В Уфе</a>
                     </li>
                   </ul>
                 </div>
@@ -1021,10 +1014,10 @@
         <div class="container">
           <div class="copyright__wrapper">
             <div class="copyright__text">
-              <p>© 2008-2016
+              <div>© 2008-2016
                 <a href="index.html">ИнфоГОСТ </a>
-              </p>
-              <p>информационный портал о сертификации </p>
+              </div>
+              <div>информационный портал о сертификации </div>
             </div>
             <div class="counters">
               <a href="#" target="_blank">counter</a>
